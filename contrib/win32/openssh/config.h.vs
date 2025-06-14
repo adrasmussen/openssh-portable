@@ -185,7 +185,7 @@
 #define GSSAPI 1
 
 /* Define when enabling GSSAPI SSPI support on Windows */
-#define GSSAPI_SSPI 1
+/* #undef  GSSAPI_SSPI */
 
 /* Define if you want to use shadow password expire field */
 /* #undef HAS_SHADOW_EXPIRE */
@@ -523,19 +523,19 @@
 /* #undef HAVE_GROUP_FROM_GID */
 
 /* Define to 1 if you have the <gssapi_generic.h> header file. */
-/* #undef HAVE_GSSAPI_GENERIC_H */
+/* #undef  HAVE_GSSAPI_GENERIC_H */
 
 /* Define to 1 if you have the <gssapi/gssapi_generic.h> header file. */
-/* #undef HAVE_GSSAPI_GSSAPI_GENERIC_H */
+#define HAVE_GSSAPI_GSSAPI_GENERIC_H 1
 
 /* Define to 1 if you have the <gssapi/gssapi.h> header file. */
-/* #undef HAVE_GSSAPI_GSSAPI_H */
+#define HAVE_GSSAPI_GSSAPI_H 1
 
 /* Define to 1 if you have the <gssapi/gssapi_krb5.h> header file. */
-/* #undef HAVE_GSSAPI_GSSAPI_KRB5_H */
+#define HAVE_GSSAPI_GSSAPI_KRB5_H 1
 
 /* Define to 1 if you have the <gssapi.h> header file. */
-#define HAVE_GSSAPI_H 1
+/* #undef HAVE_GSSAPI_H */
 
 /* Define to 1 if you have the <gssapi_krb5.h> header file. */
 /* #undef HAVE_GSSAPI_KRB5_H */
@@ -933,6 +933,9 @@
 /* define if you have ssize_t data type */
 /* #define HAVE_SSIZE_T 1 */
 
+/* stfu kerberos */
+#define SSIZE_T_DEFINED 1
+
 /* Fields in struct sockaddr_storage */
 #define HAVE_SS_FAMILY_IN_SS 1
 
@@ -1280,7 +1283,7 @@
 #define IP_TOS_IS_BROKEN 1
 
 /* Define if you want Kerberos 5 support */
-/* #undef KRB5 */
+#define KRB5 1
 
 /* Define if pututxline updates lastlog too */
 /* #undef LASTLOG_WRITE_PUTUTXLINE */
